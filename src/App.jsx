@@ -4,8 +4,10 @@ import News from "./Components/News";
 
 const App = () => {
   return (
-    <div>
-      <News />
+    <div className="container">
+      <div className="new-blog-app">
+        <News />
+      </div>
     </div>
   )
 }
