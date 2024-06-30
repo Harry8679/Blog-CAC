@@ -1,9 +1,11 @@
-import React from 'react'
+// import React from 'react'
+
+import News from "./Components/News";
 
 const App = () => {
   return (
     <div>
-      App
+      <News />
     </div>
   )
 }
