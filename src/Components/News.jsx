@@ -1,5 +1,6 @@
 import Calendar from "./Calendar";
 import Weather from "./Weather";
+import './News.css';
 
 const News = () => {
   return (
@@ -15,8 +16,10 @@ const News = () => {
             <div className="news-grid">News Grid</div>
         </div>
         <div className="my-blogs">My Blogs</div>
-        <Weather />
-        <Calendar />
+        <div className="weather-calendar">
+            <Weather />
+            <Calendar />
+        </div>
         <footer className="news-footer">Footer</footer>
       </div>
     </div>
