@@ -1,11 +1,11 @@
 // import React from 'react'
 
-const Calendar = () => {
+const Weather = () => {
   return (
     <h1>
-      Calendar
+      Weather
     </h1>
   )
 }
 
-export default Calendar;
+export default Weather;
