@@ -57,3 +57,10 @@
     height: 100%;
     border-radius: 1rem;
 }
+
+.headline {
+    width: 100%;
+    height: calc(50% - 2rem);
+    background-color: #111214;
+    border-radius: 1rem;
+}
