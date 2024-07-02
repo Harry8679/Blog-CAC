@@ -66,16 +66,20 @@
     border-radius: 1rem;
 }
 
-.news-footer {
-    width: 100%;
-    min-height: 5rem;
+.my-blogs {
+    width: clamp(20rem, 27cqi, 28%);
+    height: 100%;
     background-color: #111214;
     border-radius: 0 0 1rem 1rem;
 }
 
-.my-blogs {
-    width: clamp(20rem, 27cqi, 28%);
-    height: 100%;
+.weather-calendar {
+    flex: 1;
+}
+
+.news-footer {
+    width: 100%;
+    min-height: 5rem;
     background-color: #111214;
     border-radius: 0 0 1rem 1rem;
 }
