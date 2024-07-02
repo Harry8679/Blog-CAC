@@ -42,6 +42,7 @@
     width: 100%;
     background-color: #111214;
     height: calc(80% - 2rem);
+    border-radius: 1rem;
 }
 
 .news-footer {
@@ -49,4 +50,10 @@
     min-height: 5rem;
     background-color: #111214;
     border-radius: 0 0 1rem 1rem;
+}
+
+.news-section {
+    width: clamp(30rem, 43cqi, 40%);
+    height: 100%;
+    border-radius: 1rem;
 }
