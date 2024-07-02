@@ -1,10 +1,11 @@
 // import React from 'react'
+import './Calendar.css';
 
 const Calendar = () => {
   return (
-    <h1>
+    <div className="calendar">
       Calendar
-    </h1>
+    </div>
   )
 }
 
