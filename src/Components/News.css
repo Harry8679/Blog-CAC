@@ -33,9 +33,15 @@
 
 .user {
     width: 100%;
-    min-height: 5rem;
+    height: 20%;
     background-color: #111214;
     border-radius: 1rem;
+}
+
+.categories {
+    width: 100%;
+    background-color: #111214;
+    height: calc(80% - 2rem);
 }
 
 .news-footer {

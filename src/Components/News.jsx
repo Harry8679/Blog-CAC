@@ -20,8 +20,8 @@ const News = () => {
             <Weather />
             <Calendar />
         </div>
-        <footer className="news-footer">Footer</footer>
       </div>
+      <footer className="news-footer">Footer</footer>
     </div>
   )
 }
