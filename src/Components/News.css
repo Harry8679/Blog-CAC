@@ -37,6 +37,10 @@
     color: #ddd;
 }
 
+.search-bar input:focus {
+    width: 35rem;
+}
+
 .news-content {
     display: flex;
     column-gap: 2rem;
