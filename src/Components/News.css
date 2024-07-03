@@ -27,6 +27,16 @@
     letter-spacing: 0.2rem;
 }
 
+.search-bar input {
+    width: 25rem;
+    height: 4rem;
+    background-color: #060709;
+    border: none;
+    border-radius: 5rem;
+    padding: 0 4rem 0 2rem;
+    color: #ddd;
+}
+
 .news-content {
     display: flex;
     column-gap: 2rem;
