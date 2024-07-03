@@ -45,6 +45,12 @@
     color: transparent;
 }
 
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+}
+
 .news-content {
     display: flex;
     column-gap: 2rem;
