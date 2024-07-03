@@ -20,6 +20,13 @@
     padding: 0 4rem;
 }
 
+.logo {
+    font-family: "Nunito", sans-serif;
+    font-size: 5rem;
+    color: #ddd;
+    letter-spacing: 0.2rem;
+}
+
 .news-content {
     display: flex;
     column-gap: 2rem;
