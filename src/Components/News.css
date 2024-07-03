@@ -53,6 +53,11 @@
     background-color: transparent;
     border: none;
     position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    color: #bbb;
+    font-size: 1.8rem;
 }
 
 .news-content {
