@@ -82,6 +82,13 @@
     border-radius: 1rem;
 }
 
+.user img {
+    width: 7rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .categories {
     width: 100%;
     background-color: #111214;
