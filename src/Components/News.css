@@ -80,6 +80,12 @@
     height: 20%;
     background-color: #111214;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    cursor: pointer;
 }
 
 .user img {
@@ -89,11 +95,48 @@
     border-radius: 50%;
 }
 
+.user p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .categories {
     width: 100%;
     background-color: #111214;
     height: calc(80% - 2rem);
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem;
+}
+
+.nav-heading {
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(1.5rem, 2.5cqi, 3rem);
+    color: #ddd;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #ddd;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    font-size: 1.7rem;
+    margin-left: 1rem;
 }
 
 .news-section {
