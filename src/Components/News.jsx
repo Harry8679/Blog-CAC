@@ -23,6 +23,9 @@ const News = () => {
 //         const fetchedNews = response.data.articles;
 
 //         setHeadline(fetchedNews[0]);
+//         setNews(fetchedNews.slice(1, 7));
+
+//         console.log(news);
 //     }
 
 //     fetchNews();
@@ -70,7 +73,15 @@ const News = () => {
                 </div>
             )}
             <div className="news-grid">
-                <div className="news-grid-item">
+                {news.map((article, index) => {
+                    return (
+                        <div key={index} className="news-grid-item">
+                            <img src={article.image} alt={article.title} />
+                            <h3>{article.title}<i className="fa-regular fa-bookmark bookmark"></i></h3>
+                        </div>
+                    );
+                })}
+                {/* <div className="news-grid-item">
                     <img src={techImg} alt="Sports Image" />
                     <h3>Amoung all sons of Yehoshoua<i className="fa-regular fa-bookmark bookmark"></i></h3>
                 </div>
@@ -98,7 +109,7 @@ const News = () => {
                 <div className="news-grid-item">
                     <img src={nationImg} alt="Sports Image" />
                     <h3>Amoung all sons of Yehoshoua<i className="fa-regular fa-bookmark bookmark"></i></h3>
-                </div>
+                </div> */}
             </div>
         </div>
         <div className="my-blogs">My Blogs</div>
