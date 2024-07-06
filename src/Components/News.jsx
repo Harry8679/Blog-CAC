@@ -15,18 +15,18 @@ const News = () => {
   const [headline, setHeadline] = useState(null);
   const [news, setNews] = useState([]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchNews = async() => {
         const url = 'https://gnews.io/api/v4/search?q=example&apikey=e2dd35ebd27a08f5e915cbf2c12b050e';
 
         const response = await axios.get(url);
         const fetchedNews = response.data.articles;
 
-        console.log(fetchedNews);
+        setHeadline(fetchedNews[0]);
     }
 
     fetchNews();
-  }, []);
+  }, []);*/
   return (
     <div className="news">
       <header className="news-header">
@@ -64,8 +64,8 @@ const News = () => {
         </div>
         <div className="news-section">
             <div className="headline">
-                <img src={techImg} alt="tech Image" />
-                <h2 className="headline-title">We are trying to test something <i className="fa-regular fa-bookmark bookmark"></i></h2>
+                <img src={headline.image} alt={headline.title} />
+                <h2 className="headline-title">{headline.title} <i className="fa-regular fa-bookmark bookmark"></i></h2>
             </div>
             <div className="news-grid">
                 <div className="news-grid-item">
