@@ -52,6 +52,11 @@ const News = () => {
             </div>
             <div className="news-grid">
                 <div className="news-grid-item">
+                    <img src={techImg} alt="Sports Image" />
+                    <h3>Amoung all sons of Yehoshoua<i className="fa-regular fa-bookmark bookmark"></i></h3>
+                </div>
+
+                <div className="news-grid-item">
                     <img src={sportsImg} alt="Sports Image" />
                     <h3>Amoung all sons of Yehoshoua<i className="fa-regular fa-bookmark bookmark"></i></h3>
                 </div>
