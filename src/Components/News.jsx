@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Calendar from "./Calendar";
 import Weather from "./Weather";
 import './News.css';
@@ -8,8 +9,24 @@ import scienceImg from '../assets/images/science.jpg';
 import worldImg from '../assets/images/world.jpg';
 import healthImg from '../assets/images/health.jpg';
 import nationImg from '../assets/images/nation.jpg';
+import axios from 'axios';
 
 const News = () => {
+  const [headline, setHeadline] = useState(null);
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    const fetchNews = async() => {
+        const url = 'https://gnews.io/api/v4/search?q=example&apikey=e2dd35ebd27a08f5e915cbf2c12b050e';
+
+        const response = await axios.get(url);
+        const fetchedNews = response.data.articles;
+
+        console.log(fetchedNews);
+    }
+
+    fetchNews();
+  }, []);
   return (
     <div className="news">
       <header className="news-header">
