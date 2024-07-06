@@ -3,33 +3,34 @@ import Calendar from "./Calendar";
 import Weather from "./Weather";
 import './News.css';
 import userImg from '../assets/images/8888.jpg';
-import techImg from '../assets/images/tech.jpg';
-import sportsImg from '../assets/images/sports.jpg';
-import scienceImg from '../assets/images/science.jpg';
-import worldImg from '../assets/images/world.jpg';
-import healthImg from '../assets/images/health.jpg';
-import nationImg from '../assets/images/nation.jpg';
+import noImg from '../assets/images/no-img.png';
 import axios from 'axios';
 
 const News = () => {
   const [headline, setHeadline] = useState(null);
   const [news, setNews] = useState([]);
 
-//   useEffect(() => {
-//     const fetchNews = async() => {
-//         const url = 'https://gnews.io/api/v4/search?q=example&apikey=e2dd35ebd27a08f5e915cbf2c12b050e';
+  useEffect(() => {
+    const fetchNews = async() => {
+        // const url = 'https://gnews.io/api/v4/top-headlines?category=general&lang=fr&apikey=e2dd35ebd27a08f5e915cbf2c12b050e';
+        const url = '';
 
-//         const response = await axios.get(url);
-//         const fetchedNews = response.data.articles;
+        const response = await axios.get(url);
+        const fetchedNews = response.data.articles;
+        fetchNews.forEach((article) => {
+            if (!article.image) {
+                article.image = noImg;
+            }
+        })
 
-//         setHeadline(fetchedNews[0]);
-//         setNews(fetchedNews.slice(1, 7));
+        setHeadline(fetchedNews[0]);
+        setNews(fetchedNews.slice(1, 7));
 
-//         console.log(news);
-//     }
+        console.log(news);
+    }
 
-//     fetchNews();
-//   }, []);
+    fetchNews();
+  }, []);
   return (
     <div className="news">
       <header className="news-header">
@@ -68,7 +69,7 @@ const News = () => {
         <div className="news-section">
             {headline && (
                 <div className="headline">
-                    <img src={headline.image} alt={headline.title} />
+                    <img src={headline.image || noImg} alt={headline.title} />
                     <h2 className="headline-title">{headline.title} <i className="fa-regular fa-bookmark bookmark"></i></h2>
                 </div>
             )}
@@ -76,7 +77,7 @@ const News = () => {
                 {news.map((article, index) => {
                     return (
                         <div key={index} className="news-grid-item">
-                            <img src={article.image} alt={article.title} />
+                            <img src={article.image || noImg} alt={article.title} />
                             <h3>{article.title}<i className="fa-regular fa-bookmark bookmark"></i></h3>
                         </div>
                     );
